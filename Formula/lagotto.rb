@@ -31,6 +31,6 @@ class Lagotto < Formula
   end
 
   test do
-    system "#{bin}/lagotto", "--version"
+    system bin/"lagotto", "--version"
   end
 end
