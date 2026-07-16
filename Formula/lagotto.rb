@@ -5,21 +5,21 @@
 class Lagotto < Formula
   desc "Sniff out Go layout smells (Receiver Monolith, Decomposition Theatre, Aggregate Holder, and more)."
   homepage "https://github.com/CaliLuke/lagotto"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CaliLuke/lagotto/releases/download/v0.1.2/lagotto_0.1.2_darwin_amd64.tar.gz"
-      sha256 "a9c56e3aad5611a1e1b1910817b8d1f5d6c2c47ddcaaa2b1676d8a6c5cb11fd0"
+      url "https://github.com/CaliLuke/lagotto/releases/download/v0.2.0/lagotto_0.2.0_darwin_amd64.tar.gz"
+      sha256 "bd04d5dc431358ca6c3b22d2cd3a44c1bf3aa527eced39c8492999e405d15111"
 
       define_method(:install) do
         bin.install "lagotto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CaliLuke/lagotto/releases/download/v0.1.2/lagotto_0.1.2_darwin_arm64.tar.gz"
-      sha256 "f1ef350b1a097bb2e55660ceb3bb317fc1b82cca759c91119de3c82b348f0e0d"
+      url "https://github.com/CaliLuke/lagotto/releases/download/v0.2.0/lagotto_0.2.0_darwin_arm64.tar.gz"
+      sha256 "e60a3fb9d8424e3c726a70e3fa27533c38dd043d68aec8a84d4384ffe6d187d2"
 
       define_method(:install) do
         bin.install "lagotto"
@@ -29,15 +29,15 @@ class Lagotto < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/lagotto/releases/download/v0.1.2/lagotto_0.1.2_linux_amd64.tar.gz"
-      sha256 "d217a4e775b3444cae6340f8c3363754834f7b1c2c27e3a5536332873f9cad34"
+      url "https://github.com/CaliLuke/lagotto/releases/download/v0.2.0/lagotto_0.2.0_linux_amd64.tar.gz"
+      sha256 "1e20e88cbc40aab83758fcb8de40f425596f8a4d92f592cb5300c1a7a1ba91dd"
       define_method(:install) do
         bin.install "lagotto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/lagotto/releases/download/v0.1.2/lagotto_0.1.2_linux_arm64.tar.gz"
-      sha256 "5a7709a1d1292f3896d97f457db7fb0681b48d33d5f02913e388a2b79815daef"
+      url "https://github.com/CaliLuke/lagotto/releases/download/v0.2.0/lagotto_0.2.0_linux_arm64.tar.gz"
+      sha256 "e0043d5d7c899ab8a748d0bd8a118c2b7f7847938c3f642adc361b231931745b"
       define_method(:install) do
         bin.install "lagotto"
       end
