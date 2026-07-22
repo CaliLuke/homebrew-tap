@@ -11,7 +11,7 @@ class GoArgoMcp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.1.0/go-argo-mcp_Darwin_x86_64.tar.gz"
-      sha256 "36347655ac2deb9a68690b600b6a695dbc548dccd058e7eb70f81d4efbf4164d"
+      sha256 "406f777e95473409106aca7f0f86547abe4ab6df0a5a805e69df4dd5bedcdcc2"
 
       define_method(:install) do
         bin.install "go-argo-mcp"
@@ -19,7 +19,7 @@ class GoArgoMcp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.1.0/go-argo-mcp_Darwin_arm64.tar.gz"
-      sha256 "05d84481508158b0064f879298d26866d413d89abc0362cb8060652cd2b15e06"
+      sha256 "ccdd216edae4f73b7980681c96e959682ed70ce7adcdc8b6b59720f506f60cb7"
 
       define_method(:install) do
         bin.install "go-argo-mcp"
@@ -30,14 +30,14 @@ class GoArgoMcp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.1.0/go-argo-mcp_Linux_x86_64.tar.gz"
-      sha256 "08ed91dbeabf13762212d0fa2935524084b57c4e1132280680a6dafaf4a20d6f"
+      sha256 "2ea3e8ed4d82771105c5cbb84f0ed13209b20913cbf0eafa0c7928df7f135bf5"
       define_method(:install) do
         bin.install "go-argo-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.1.0/go-argo-mcp_Linux_arm64.tar.gz"
-      sha256 "5a8b80920ae9dc38ee7754d7577ffdf661b2b0098badcf7d7cdae83ca2a127ee"
+      sha256 "542411dd02b2f3c29ec2140d55fb9e986148aa6943fe902b3e73730f410bee6c"
       define_method(:install) do
         bin.install "go-argo-mcp"
       end
@@ -52,6 +52,6 @@ class GoArgoMcp < Formula
   end
 
   test do
-    system "#{bin}/go-argo-mcp", "--version"
+    system bin/"go-argo-mcp", "--version"
   end
 end
