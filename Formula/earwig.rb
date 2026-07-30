@@ -5,27 +5,27 @@
 class Earwig < Formula
   desc "Capture Codex and Claude Code turns for local evaluation"
   homepage "https://github.com/CaliLuke/earwig"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.1/earwig_0.1.1_darwin_amd64.tar.gz"
-      sha256 "566925ac87b6ca9a0e560a38c0999511b8236fa59a9869c8c1ef066c8debae89"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.2/earwig_0.1.2_darwin_amd64.tar.gz"
+      sha256 "0444f7137122d47dc8ad5bb579e7e3c8d3828325360c9bd0c9805273a4ad3d09"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.1/earwig_0.1.1_darwin_arm64.tar.gz"
-      sha256 "38393b27058ebee99d609a07b31b1197d7c2146f94f417238b171510ebc23662"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.2/earwig_0.1.2_darwin_arm64.tar.gz"
+      sha256 "cbcc31d2bd70f464fc6ec9db94e6d612bd89fe4b759e85cab8d52920da82f687"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.1/earwig_0.1.1_linux_amd64.tar.gz"
-      sha256 "b8ca583025667419a145d666665dd1e2c07759c18ff4eac4a65668c1564bbf4c"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.2/earwig_0.1.2_linux_amd64.tar.gz"
+      sha256 "37e52983ddf0aa24123cccb5703abdb65e1b5e596d87e54c19a138fc465fd47c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.1/earwig_0.1.1_linux_arm64.tar.gz"
-      sha256 "955dc4cf9f48fe26ddc5720a1ec2da4a2cdf6105474a8fa25feb65dd98072c36"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.2/earwig_0.1.2_linux_arm64.tar.gz"
+      sha256 "17b09318864402abe8ce6d1b839b89d9d06c86e680485b1ef734f20857ec78db"
     end
   end
 
@@ -36,6 +36,7 @@ class Earwig < Formula
 
   service do
     run [opt_bin/"earwig", "watch"]
+    environment_variables PATH: std_service_path_env
     keep_alive true
     working_dir var
     log_path var/"log/earwig.log"
