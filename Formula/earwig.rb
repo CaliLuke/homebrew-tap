@@ -5,27 +5,27 @@
 class Earwig < Formula
   desc "Capture Codex and Claude Code turns for local evaluation"
   homepage "https://github.com/CaliLuke/earwig"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.9/earwig_0.1.9_darwin_amd64.tar.gz"
-      sha256 "a1ea436914f6ebf4f264fd4f432bd096f87a303c1162c9a1f18e9e266bf305a9"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.10/earwig_0.1.10_darwin_amd64.tar.gz"
+      sha256 "bc632e341adf5a2125dfb1d99aadca58a82644d1f2f59fb98fb2f6726f050eb9"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.9/earwig_0.1.9_darwin_arm64.tar.gz"
-      sha256 "2ffd235d7cab52b81015e0a09aff6b5476a5c67bb280ff1b121828f8be114fb4"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.10/earwig_0.1.10_darwin_arm64.tar.gz"
+      sha256 "a246891969f1f4ccdb49898362b9e515f19de4d40ef196721174c0a8bb013274"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.9/earwig_0.1.9_linux_amd64.tar.gz"
-      sha256 "d7fcbc2a4341ed5c8e7ba5433021bebf95c002a959a7263cbfb9d05264161724"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.10/earwig_0.1.10_linux_amd64.tar.gz"
+      sha256 "0e21a488eea7994b7f88bed7b050c6a8c9a65fb868df71d21a67c72f0cd3ec84"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.9/earwig_0.1.9_linux_arm64.tar.gz"
-      sha256 "da0c09e04e7f177fce0b9175c8605b942dc74f56df0c96b749e3489c1b624f38"
+      url "https://github.com/CaliLuke/earwig/releases/download/v0.1.10/earwig_0.1.10_linux_arm64.tar.gz"
+      sha256 "b0c070bf0fb738f852ce825aa0650f51bc2e0230ff60d15cff934a9f4ba60129"
     end
   end
 
