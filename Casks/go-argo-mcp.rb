@@ -5,9 +5,9 @@
 cask "go-argo-mcp" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.2.1"
-  sha256 arm:   "fdfeb7a59bdc85c8c342cac8bb1ebd37208cd9e46619196989a57f60cc653b56",
-         intel: "ccf90d866eebdff00f08501e7feae175892db819de1e21d02dccbd865ff0bf2c"
+  version "0.3.0"
+  sha256 arm:   "563ecb8e414ed5bdc936e790b7bcb83be69d47fcbbd6deaac69599213c8c7b35",
+         intel: "494b95c6144d150b0714dce8f80070b63283df4de0cb217d6385c6ab1614c91b"
 
   url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v#{version}/go-argo-mcp_Darwin_#{arch}.tar.gz"
   name "go-argo-mcp"
