@@ -5,28 +5,28 @@
 class GoArgoMcp < Formula
   desc "Lightweight Go MCP server for Argo Workflows"
   homepage "https://github.com/CaliLuke/go-argo-mcp"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.0/go-argo-mcp_Darwin_x86_64.tar.gz"
-      sha256 "0a0c78baecd8e9a43cfe88fc25b2d8e864adcf0793a3251fd4829da827886ca3"
+      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.1/go-argo-mcp_Darwin_x86_64.tar.gz"
+      sha256 "ccf90d866eebdff00f08501e7feae175892db819de1e21d02dccbd865ff0bf2c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.0/go-argo-mcp_Darwin_arm64.tar.gz"
-      sha256 "e71e6e0ca986269b9c0ec59e9c9c85cc170aade7c074db0ebd0da7037f46fb94"
+      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.1/go-argo-mcp_Darwin_arm64.tar.gz"
+      sha256 "fdfeb7a59bdc85c8c342cac8bb1ebd37208cd9e46619196989a57f60cc653b56"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.0/go-argo-mcp_Linux_x86_64.tar.gz"
-      sha256 "5e27a14777644a881db57ea104a175109e6e882649e14eb25e77f727b0686c19"
+      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.1/go-argo-mcp_Linux_x86_64.tar.gz"
+      sha256 "a1450f5c495999d3d00beafbf1a8053661c0db67b78798ec49a6d36de3392bf4"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.0/go-argo-mcp_Linux_arm64.tar.gz"
-      sha256 "639c5522dddaa38e84eb259b0af07f01f31d2a07d02cda15711d464589bbe0d4"
+      url "https://github.com/CaliLuke/go-argo-mcp/releases/download/v0.2.1/go-argo-mcp_Linux_arm64.tar.gz"
+      sha256 "0e3442eb8594dd610ff98b2e4c9f4429d940a1c236011a64c3fd0629e10a6ed2"
     end
   end
 
